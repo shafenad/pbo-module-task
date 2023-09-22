@@ -1,4 +1,4 @@
-﻿
+
 class Laptop
 {
     private string merk;
@@ -73,16 +73,73 @@ class Program
 
         laptop2.LaptopDinyalakan();
         laptop2.LaptopDimatikan();
+        laptop1.Ngoding();
 
 
         laptop2.BermainGame();
 
         Predator predator = new Predator("Predator", "Core i7", "AMD", "Core i7");
+        predator.BermainGame();
+
 
 
         Console.WriteLine($"Merk: {predator.GetMerk()}");
         Console.WriteLine($"Tipe: {predator.GetTipe()}");
         Console.WriteLine($"VGA: {predator.GetVga()}");
         Console.WriteLine($"Processor: {predator.GetProcessor()}");
+    }
+}
+
+
+
+// code nomor 3
+class Laptop
+{
+    private string merk;
+    private string tipe;
+    private string vga;
+    private string processor;
+
+    public Laptop(string merk, string tipe, string vga, string processor)
+    {
+        this.merk = merk;
+        this.tipe = tipe;
+        this.vga = vga;
+        this.processor = processor;
+    }
+
+    public string GetMerk()
+    {
+        return merk;
+    }
+
+    public string GetTipe()
+    {
+        return tipe;
+    }
+
+    public string GetVga()
+    {
+        return vga;
+    }
+
+    public string GetProcessor()
+    {
+        return processor;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Membuat objek laptop1 dan mengisi spesifikasi
+        Laptop laptop1 = new Laptop("Vivobook", "Core i5", "Nvidia", "Intel Core i5");
+
+        // Menampilkan spesifikasi laptop1
+        Console.WriteLine($"Merk: {laptop1.GetMerk()}");
+        Console.WriteLine($"VGA: {laptop1.GetVga()}");
+        Console.WriteLine($"Merk Processor: {laptop1.GetProcessor()}");
+        Console.WriteLine($"Tipe Processor: {laptop1.GetTipe()}");
     }
 }
