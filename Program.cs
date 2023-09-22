@@ -73,14 +73,19 @@ class Program
 
         laptop2.LaptopDinyalakan();
         laptop2.LaptopDimatikan();
+
+
         laptop1.Ngoding();
 
 
         laptop2.BermainGame();
 
         Predator predator = new Predator("Predator", "Core i7", "AMD", "Core i7");
+       
         predator.BermainGame();
 
+        //Acer acer = new Acer("Predator", "Core i7", "AMD", "Core i7");
+        //acer.BermainGame();
 
 
         Console.WriteLine($"Merk: {predator.GetMerk()}");
@@ -92,7 +97,7 @@ class Program
 
 
 
-// code nomor 3
+// Penyelesaian nomor 3
 class Laptop
 {
     private string merk;
@@ -133,10 +138,10 @@ class Program
 {
     static void Main()
     {
-        // Membuat objek laptop1 dan mengisi spesifikasi
+       
         Laptop laptop1 = new Laptop("Vivobook", "Core i5", "Nvidia", "Intel Core i5");
 
-        // Menampilkan spesifikasi laptop1
+
         Console.WriteLine($"Merk: {laptop1.GetMerk()}");
         Console.WriteLine($"VGA: {laptop1.GetVga()}");
         Console.WriteLine($"Merk Processor: {laptop1.GetProcessor()}");
